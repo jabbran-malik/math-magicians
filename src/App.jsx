@@ -4,7 +4,6 @@ import Calculator from './components/Calculator';
 function App() {
   return (
     <div>
-      <h1>Welcome to Math Magicians!</h1>
       <Calculator />
     </div>
   );
