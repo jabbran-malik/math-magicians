@@ -1,0 +1,95 @@
+/* Optional: poori screen me center me rakhne ke liye */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #2d313a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Outer box */
+.calculator {
+  width: 330px;
+  border: 1px solid #1f222b;
+  background: #4b4f5c;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+/* Top display bar */
+.display {
+  background: #6b6f7c;
+  color: #ffffff;
+  height: 70px;
+  padding: 0 16px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Grid of buttons */
+.buttons {
+  background: #e9eaec;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 60px;
+  gap: 1px;
+}
+
+/* Basic button styling */
+.buttons button {
+  border: 1px solid #d0d1d5;
+  background: #f5f5f6;
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Hover/active effects */
+.buttons button:hover {
+  background: #e8e8ea;
+}
+
+.buttons button:active {
+  background: #dddddf;
+}
+
+/* Operators and "=" button (orange/light orange) */
+.buttons button:nth-child(4),
+.buttons button:nth-child(8),
+.buttons button:nth-child(12),
+.buttons button:nth-child(16),
+.buttons button:nth-child(19) {
+  background: #f7941d; /* orange */
+  color: #fff;
+  border-color: #f7941d;
+}
+
+.buttons button:nth-child(4):hover,
+.buttons button:nth-child(8):hover,
+.buttons button:nth-child(12):hover,
+.buttons button:nth-child(16):hover,
+.buttons button:nth-child(19):hover {
+  background: #f8a541; /* light orange */
+}
+
+.buttons button:nth-child(4):active,
+.buttons button:nth-child(8):active,
+.buttons button:nth-child(12):active,
+.buttons button:nth-child(16):active,
+.buttons button:nth-child(19):active {
+  background: #de7a02;
+}
+
+/* Make "0" button span two columns */
+.buttons button:nth-child(17) {
+  grid-column: span 2;
+}
