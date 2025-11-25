@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function Button({label , onclick}) {
+function Button({ label, onClick }) {
   return (
-    <button className="calculator-button" onclick={onclick}>{label}</button>
-  )
+    <button className="calculator-button" onClick={() => onClick(label)}>
+      {label}
+    </button>
+  );
 }
 
 export default Button;
